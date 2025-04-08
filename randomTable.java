@@ -1,7 +1,5 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-
-
-import static java.lang.System.*;
+/// 
 import java.util.ArrayList;
 
 import java.util.random.RandomGenerator;
@@ -15,7 +13,7 @@ public class randomTable {
         int moyenne = 0;
         int highest = 0;
         int lowers = 0;
-        int ecartType = 0;
+        //int ecartType = 0;
         int pair = 0;
         int impair = 0;
         int positif = 0;
