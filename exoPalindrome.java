@@ -5,7 +5,7 @@ public class exoPalindrome {
     public static void main(String... args) {
         System.out.println(retourneString("Bonjour !"));
         System.out.println(isPalindrome("radar"));
-        System.out.println(isPalindrome("Bonjour !"));
+        System.out.println(retourneString("Bonjour !"));
     }
 
     private static String retourneString(String  str){
