@@ -29,14 +29,28 @@ public class spaceShooter {
                 niveau.get(rnd1).set(rnd2, 'E');
                 cnt++;
             }
-            
         }
-
+        int ligne = 8;
         int rnd = randomGenerator.nextInt(4,6);
         niveau.get(9).set(rnd, 'V');
-        for (int i = 0; i < 10; i++) {
-            out.println(niveau.get(i) + "\n");
+        while(ligne >= 0){
+            if(niveau.get(ligne).get(rnd) == '.'){
+                ligne--;
+                niveau.get(ligne).set(rnd, 'V');
+                niveau.get(ligne+1).set(rnd, '.');
+            } else {
+                rnd++;
+                niveau.get(ligne-1).set(rnd, 'V');
+                niveau.get(ligne+1).set(rnd, '.');
+            }
+    
+    
+            for (int i = 0; i < 10; i++) {
+                out.println(niveau.get(i) + "\n");
+            }
+            out.println("\n ----------------------------------------------------");
         }
+        out.println("Vous avez gagné !");
     }
 }
 
