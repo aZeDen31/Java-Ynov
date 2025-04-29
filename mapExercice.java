@@ -13,7 +13,8 @@ public class mapExercice {
 
     public static void main(String... args) {
         //out.println(generation());
-        out.println(countWords("Le feu ça brûle et ça fait mal et l'eau ça mouille mais ça moins mal que le feu"));
+        //out.println(countWords("Le feu ça brûle et ça fait mal et l'eau ça mouille mais ça moins mal que le feu"));
+        out.println(countA(List.of("I", "love", "Java", "and", "the", "JVM", "which", "is", "the", "Java", "Virtual", "Machine")));
     }
 
     public static String generation(){
@@ -63,5 +64,29 @@ public class mapExercice {
         }
 
         return map;
+    }
+
+    public static Integer countA(List<String> words){
+        Map<String, Integer> map = new HashMap<>();
+        int cnt = 0;
+        int cntInter = 0;
+        for(String i : words){
+            if(map.containsKey(i)){
+                cnt += map.get(i);
+            } else {
+                for(int j = 0; j < i.length(); j++){
+                    if(i.charAt(j) == 'a' || i.charAt(j) == 'A'){
+                        cntInter++;
+                    }
+                    
+                }
+                map.put(i, cntInter);
+                cnt += cntInter;
+                cntInter = 0;
+            }
+        }
+        
+        System.out.println(map);
+        return cnt;
     }
 }
