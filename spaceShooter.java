@@ -21,7 +21,8 @@ public class spaceShooter {
         }
         
         int cnt = 0;
-        while(cnt < 7){
+        int nbEnnemi = randomGenerator.nextInt(0,8);
+        while(cnt < nbEnnemi){
             int rnd1 = randomGenerator.nextInt(0,8);
             int rnd2 = randomGenerator.nextInt(0,9);
 
