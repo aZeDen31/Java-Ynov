@@ -4,6 +4,7 @@
 import static java.lang.System.*;
 import java.util.random.RandomGenerator;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +12,8 @@ import java.util.Map;
 public class mapExercice {
 
     public static void main(String... args) {
-        out.println(generation());
+        //out.println(generation());
+        out.println(countWords("Le feu ça brûle et ça fait mal et l'eau ça mouille mais ça moins mal que le feu"));
     }
 
     public static String generation(){
@@ -46,5 +48,20 @@ public class mapExercice {
         }
 
         return map; 
+    }
+
+    public static Map<String, Integer> countWords(String str){
+        String[] list = str.split(" ");
+        List<String> liste = new ArrayList<>(Arrays.asList(list));
+        Map<String, Integer> map = new HashMap<>();
+        String i = "";
+
+        while(!liste.isEmpty()){
+            i = liste.get(0);
+            map.put(i, map.getOrDefault(i, 0) + 1);
+            liste.remove(0);
+        }
+
+        return map;
     }
 }
