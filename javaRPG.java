@@ -21,12 +21,12 @@ public class javaRPG {
 
             System.out.print("Voulez vous ajouter un autre personnage ? [y/n] ");
             String cont = scanner.nextLine();
-
             
-
             if(cont == "n"){
                 continuer = false;
             }
         }
+        
+        scanner.close();
     }
 }
