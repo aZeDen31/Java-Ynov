@@ -1,3 +1,4 @@
+package javaRPG;
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 
 
